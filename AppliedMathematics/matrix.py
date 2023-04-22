@@ -27,8 +27,9 @@ class matrix():
                 sum = 0
                 for row in self.data:
                     for i in range(self.columns):
-                        sum += row[i] * other.data[i][other.columns - count - 1]
-                res.append(sum)
+                        sum += row[i] * other.data[i][count]
+
+                    res.append(sum)
 
                 count += 1
 
@@ -43,8 +44,7 @@ class matrix():
 A = matrix(3,3)
 A.add_data([1,2,3,4,5,6,7,8,9])
 B = matrix(3,3)
-B.add_data([2,2,2,2,2,2,2,2,2])
-A.print_m()
+B.add_data([2,2,2,2,2,4,4,2,2])
 
 #Testing
 while True:
